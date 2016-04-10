@@ -1,0 +1,21 @@
+.dropclick-button {
+}
+
+.dropclick {
+  position: relative;
+  display: inline-block;
+}
+
+.dropclick-content {
+  display: none;
+  position: absolute;
+  overflow: auto;
+}
+
+.dropclick-content a {
+  display: block;
+}
+
+.show {
+  display: block;
+}

@@ -1,0 +1,50 @@
+$small_font: 12pt;
+$normal_font: 14pt;
+$large_font: 17pt;
+
+.small {
+  font-size: $small_font;
+}
+
+.normal {
+  font-size: $normal_font;
+}
+
+.large {
+  font-size: $large_font;
+}
+
+$san_serif_font: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+$serif_font: Georgia, Times, Times New Roman, serif;
+
+.san-serif {
+  font-family: $san_serif_font;
+}
+
+.serif {
+  font-family: $serif_font;
+}
+
+* {
+  font-size: $normal_font;
+  color: $jmd-text-gray;
+  letter-spacing: .75px;
+}
+
+.heading {
+  font-family: $serif_font;
+  font-size: $large_font;
+  color: black;
+}
+
+h1 {
+  @extend .heading;
+}
+
+h2 {
+  @extend .heading;
+}
+
+h3 {
+  @extend .heading;
+}

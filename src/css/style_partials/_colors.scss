@@ -1,0 +1,23 @@
+$jmd-cyan: rgb(0, 174, 239);
+$jmd-orange: rgb(241, 90, 34);
+$jmd-purple: rgb(56, 47, 66);
+$jmd-text-gray: rgb(70, 73, 74);
+
+.jmd-cyan {
+  background-color: $jmd-cyan;
+  color: $jmd-purple;
+}
+
+.jmd-orange {
+  background-color: $jmd-orange;
+  color: $jmd-purple;
+}
+
+.jmd-purple {
+  background-color: $jmd-purple;
+  color: white;
+}
+
+.white {
+  color: white;
+}

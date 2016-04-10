@@ -1,0 +1,60 @@
+@import 'style_partials/colors';
+@import "style_partials/fonts_sizes";
+
+.top-name {
+  background: $jmd-purple;
+  font-size: $small_font;
+  font-style: $serif_font;
+  color: white;
+  float: left;
+}
+
+.top-nav {
+  background-color: $jmd-purple;
+  color: white;
+  padding: 15px;
+  font-family: $serif_font;
+
+  * {
+    padding: 3px;
+  }
+
+  li {
+    display: inline;
+    padding: 5px 10px 5px 10px;
+    font-style: $serif_font;
+  }
+
+  a {
+    background-color: $jmd-purple;
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $jmd-cyan;
+  }
+}
+
+.main-content {
+  padding-top: 40px;
+  text-align: left;
+  letter-spacing: .25px;
+  line-height: 1.3;
+  font-family: $san_serif_font;
+
+  ul {
+    list-style-position: inside;
+    list-style-type: disk;
+  }
+
+  ul ul {
+    list-style-type: disk;
+    padding-left: 1.5em;
+  }
+
+  img {
+    padding: 0.1em;
+    margin: 0.2em;
+  }
+}
