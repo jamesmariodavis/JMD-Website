@@ -1,16 +1,16 @@
 $small_font: 12pt;
 $normal_font: 14pt;
-$large_font: 17pt;
+$large_font: 19pt;
 
-.small {
+.small-font {
   font-size: $small_font;
 }
 
-.normal {
+.normal-font {
   font-size: $normal_font;
 }
 
-.large {
+.large-font {
   font-size: $large_font;
 }
 

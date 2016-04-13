@@ -9,6 +9,10 @@ img {
   height: auto;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 @import 'mechanics_partials/columns';
 @import 'mechanics_partials/alignment';
 @import 'mechanics_partials/dropclick';

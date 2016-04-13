@@ -15,7 +15,8 @@
     "gulp-s3-upload": "^1.5.2",
     "gulp-sass": "^2.2.0",
     "gulp-swig": "^0.8.0",
-    "run-sequence": "^1.1.5"
+    "run-sequence": "^1.1.5",
+    "swig": "^1.4.2"
   },
   "scripts": {
     "gulp": "gulp"

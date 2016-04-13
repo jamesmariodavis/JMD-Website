@@ -1,1 +1,104 @@
-{% extends '../templates/homepage.swig' %}
+{% extends "../templates/homepage.swig" %}
+{% include './papers.json' with papers %}
+
+{%  set
+papers = [
+{
+"title": "Revenue Management under a Nonparametric Ranking Based Choice Model",
+"date": "2015",
+"authors": [
+"Alice Paul",
+"James M. Davis",
+"Jacob Feldman"
+],
+"filename": "RevManNonparametric.pdf",
+"abstract": "We consider revenue management problems when customers choose among the offered products according to a nonparametric ranking-based choice model. Under this nonparametric choice model, each customer class is distinguished by a unique ranking of the available products and an arrival probability. Given the arrival of a customer from a particular customer class, this customer will purchase the highest ranking offered product in her respective ranking list. To simplify the revenue management problems that we consider, we restrict the set of customer classes that can exist. Specifically, given a tree where the nodes are the products, we assume that the set of customer classes is derived from paths in the tree, where the order of nodes visited along each potential path gives the corresponding ranking list of a potential customer type. First, we study assortment problems, where the goal is to find a set of products to offer so as to maximize the expected revenue from each customer. We give a dynamic program to obtain the optimal solution. Second, we show how this dynamic programming formulation can be extended to consider the assortment problem when there is a constraint limiting the space consumption of the offered products. Third, we study network revenue management problems, where the goal is to adjust the set of offered products over a selling horizon when the sale of each product consumes a combination of a limited set of resources. A standard linear programming approximation of this problem includes one decision variable for each subset of products. We show that this linear program can be reduced to an equivalent one of substantially smaller size. We give an algorithm to recover the optimal solution to the original linear program from the reduced linear program."
+},
+{
+"title": "A 3/2-Approximation Algorithm for Some Minimum-Cost Graph Problems",
+"date": "2015",
+"authors": [
+"Basile Couetoux",
+"James M. Davis",
+"David P. Williamson"
+],
+"filename": "ConstrForrest.pdf",
+"abstract": "We consider a class of graph problems introduced in a paper of Goemans and Williamson that involve finding forests of minimum edge cost. This class includes a number of location/routing problems; it also includes a problem in which we are given as input a parameter k, and want to find a forest such that each component has at least k vertices. Goemans and Williamson gave a 2-approximation algorithm for this class of problems. We give an improved 32 -approximation algorithm."
+},
+{
+"title": "Assortment Optimization Over Time",
+"date": "2015",
+"authors": [
+"James M. Davis",
+"Huseyin Topaloglu",
+"David P. Williamson"
+],
+"filename": "AsstOverTime.pdf",
+"abstract": "In this note, we introduce the problem of assortment optimization over time. In this problem, we have a sequence of time periods and can only introduce one new product per time step, and we are not allowed to remove products from our assortment that have already been introduced. The goal is to determine which products to introduce so as to maximize the total revenue realized over all the time steps under some choice model. We show how to give a 1/2-approximation algorithm for this problem under a general choice model, for which the multinomial logit choice model is a special case. We further show a (1 − 1/e)-approximation algorithm if the revenue function is monotone and submodular. Finally, we show that the problem is NP-hard to compute for a natural special case of the general choice model whose revenue function is monotone and submodular."
+},
+{
+"title": "Assortment Planning under the Multinomial Logit Model with Totally Unimodular Constraint Structures",
+"date": "2013",
+"authors": [
+"James M. Davis",
+"Guillermo Gallego",
+"Huseyin Topaloglu"
+],
+"filename": "MNLUnimodular.pdf",
+"abstract": "We consider constrained assortment problems assuming that customers select according to the multinomial logit model (MNL). The objective is to find an assortment that maximizes the expected revenue per customer and satisfies a set of totally unimodular constraints. We show that this fractional binary problem can be solved as an equivalent linear program. We use this result to solve five classes of practical assortment optimization and pricing models under MNL, including (1) assortment models with various bounds on the cardinality of the assortment, (2) assortment models where we need to decide the display location of the selected products, (3) pricing models with a finite menu of possible prices, (4) quality consistent pricing models where the prices of the products have to follow a specified quality ordering, (5) assortment models with precedence constraints. We show that all of these classes of problems can be solved as linear programs. In some instances, constraints can be combined as long as total unimodularity is preserved. In addition, we show how the results extend to a larger class of attraction choice models that avoid some of the shortcomings of MNL."
+},
+{
+"title": "Assortment Optimization under Variants of the Nested Logit Model",
+"date": "2014",
+"authors": [
+"James M. Davis",
+"Guillermo Gallego",
+"Huseyin Topaloglu"
+],
+"filename": "NestedLogit.pdf",
+"abstract": "We study a class of assortment optimization problems where customers choose among the offered products according to the nested logit model. There is a fixed revenue associated with each product. The objective is to find an assortment of products to offer so as to maximize the expected revenue per customer. We show that the problem is polynomially solvable when the nest dissimilarity parameters of the choice model are less than one and the customers always make a purchase within the selected nest. Relaxing either of these assumptions renders the problem NP-hard. To deal with the NP-hard cases, we develop parsimonious collections of candidate assortments with worst-case performance guarantees. We also formulate a convex program whose optimal objective value is an upper bound on the optimal expected revenue. Thus, we can compare the expected revenue provided by an assortment with the upper bound on the optimal expected revenue to get a feel for the optimality gap of the assortment. By using this approach, our computational experiments test the performance of the parsimonious collections of candidate assortments that we develop."
+},
+{
+"title": "Joint Assortment and Quality Consistent Discrete Pricing Under the Nested Logit Model",
+"date": "2015",
+"authors": [
+"James M. Davis",
+"Huseyin Topaloglu",
+"David P. Williamson"
+],
+"filename": "NLQualConsis.pdf",
+"abstract": "We consider pricing problems when customers choose among the products according to the nested logit model and there is a quality consistency constraint on the prices charged for the products. We consider two types of quality consistency constraint. In the first type of constraint, there is an inherent ordering between the qualities of the products in a particular nest and the price for a product of a higher quality level should be larger. In the second type of constraint, different nests correspond to different quality levels and the price for any product that is in a nest corresponding to a higher quality level should be larger than the price for any product that is in a nest corresponding to a lower quality level. The prices for the products are chosen within a finite set of possible prices. We develop algorithms to find the prices to charge for the products to maximize the expected revenue obtained from a customer, while adhering to a quality consistency constraint. Our algorithms are based on solving linear programs whose sizes scale polynomially with the number of nests, number of products and number of possible prices for the products. We also give extensions to the cases beyond the two types of quality consistency constraints. Numerical experiments indicate that our algorithms can effectively compute the optimal prices even when there is a large number of products in consideration."
+},
+{
+"title": "Combinatorial algorithms for minimizing the weighted sum of completion times on a single machine",
+"date": "2012",
+"authors": [
+"James M. Davis",
+"Rajiv Gandhi",
+"Vijay H. Kothari"
+],
+"filename": "SchedulingPrimalDual.pdf",
+"abstract": "In this paper we study the problem of minimizing the weighted sum of completion times of jobs with release dates on a single machine. We develop two algorithms that rely on “the simplest [linear program] relaxation” [8]. For the first algorithm we consider the online setting where we gain knowledge of a job on its release date and produce a schedule as the machine processes jobs. We develop an online dual fitting algorithm with an approximation guarantee of 3. This is the first online algorithm to use this LP as a lower bound. For the second algorithm we work in the off-line setting and develop a primal-dual algorithm with an approximation guarantee of 2.42. This algorithm provides the current best upper bound on the integrality gap of this simple LP formulation."
+}
+]
+%}
+
+{% block content %}
+    <h2>Papers (with abstracts)</h2>
+    <br>
+    {% for p in papers|sortOnKey('date', true) %}
+        <b>{{ p.title }}</b>
+        {% if p.date %}
+            <span class="small-font">({{ p.date }})</span>
+        {% endif %}
+        <p class="small-font"> {{ p.authors|join(", ") }} </p>
+        {% if p.abstract %}
+            (abstract button placeholder)
+        {% endif %}
+        {% if p.filename %}
+            (<a href="/papers/{{ p.filename }}">pdf</a>)
+        {% endif %}
+        <br> <br>
+    {% endfor %}
+
+{% endblock content %}
