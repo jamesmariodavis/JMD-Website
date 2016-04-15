@@ -13,8 +13,6 @@ var runSequence = require('run-sequence');
 var swig = require('swig')
 var swigGulp = require('gulp-swig');
 var sass = require('gulp-sass');
-var frontMatter = require('gulp-front-matter');
-//var data = require('gulp-data');
 var filter = require('gulp-filter');
 var s3 = require('gulp-s3-upload')(JSON.parse(fs.readFileSync('./aws.json')));
 
@@ -54,7 +52,7 @@ gulp.task('compile-html', function() {
         setup: function (swig) {
             swig.setFilter('sortOnKey', swigSortOnKey);
         }
-    }
+    };
     
     return gulp.src('./src/**/*.html')
         .pipe(swigGulp(swigOpts))

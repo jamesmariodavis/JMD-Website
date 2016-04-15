@@ -89,7 +89,12 @@ papers = [
     {% for p in papers|sortOnKey('date', true) %}
         <b>{{ p.title }}</b>
         {% if p.date %}
-            <span class="small-font">({{ p.date }})</span>
+            {% if p.date == "2016" %}
+                <span class="large-font">({{ p.date }})</span>
+            {% endif %}
+            {% if p.date != "2016" %}
+                <span class="small-font">({{ p.date }})</span>
+            {% endif %}
         {% endif %}
         <p class="small-font"> {{ p.authors|join(", ") }} </p>
         {% if p.abstract %}
